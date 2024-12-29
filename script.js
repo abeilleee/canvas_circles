@@ -26,7 +26,7 @@ let canvas = {
             })
         }
     },
-    update(){
+    update() {
         for (let circle of this.circles) {
             circle.x += circle.sx;
             circle.y += circle.sy;
@@ -38,6 +38,13 @@ let canvas = {
             this.c.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
             this.c.fill();
         }
+    },
+    run() {
+        window.requestAnimationFrame(() => {
+            this.update();
+            this.render();
+            this.run();
+        })
     },
     start() {
         this.init();
