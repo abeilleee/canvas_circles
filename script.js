@@ -10,19 +10,23 @@ let canvas = {
     width: 640,
     height: 320,
     circles: [],
+    circlesNum: 10,
     init() {
         this.c = document.getElementById('my-canvas').getContext('2d');
         console.log('init');
     },
     createCircle() {
-        this.circles.push({
-            x: this.width * Math.random(),
-            y: this.height * Math.random(),
-            radius: 50 * Math.random(),
-        })
+        for (let i = 0; i <= this.circlesNum; i++) {
+            this.circles.push({
+                x: this.width * Math.random(),
+                y: this.height * Math.random(),
+                radius: 50 * Math.random(),
+            })
+        }
     },
-    render(){
-        for(let circle of this.circles) {
+    render() {
+        for (let circle of this.circles) {
+            this.c.beginPath();
             this.c.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
             this.c.fill();
         }
