@@ -49,7 +49,8 @@ let canvas = {
     start() {
         this.init();
         this.createCircle();
-        this.render();
+        // this.render();
+        this.run();
     }
 }
 
