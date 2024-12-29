@@ -21,7 +21,15 @@ let canvas = {
                 x: this.width * Math.random(),
                 y: this.height * Math.random(),
                 radius: 50 * Math.random(),
+                sx: 5 * Math.random(),          //speed x
+                sy: 5 * Math.random(),          //speed y
             })
+        }
+    },
+    update(){
+        for (let circle of this.circles) {
+            circle.x += circle.sx;
+            circle.y += circle.sy;
         }
     },
     render() {
