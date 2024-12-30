@@ -31,7 +31,7 @@ let canvas = {
                 radius: 50 * Math.random(),
                 sx: 5 * Math.random(),          //speed x
                 sy: 5 * Math.random(),          //speed y
-                
+                color: this.colorArr[Math.floor(Math.random() * this.colorArr.length + 1)]
             })
         }
     },
