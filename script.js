@@ -31,8 +31,11 @@ let canvas = {
             circle.x += circle.sx;
             circle.y += circle.sy;
 
-            if (circle.x > this.width || circle.x < 0) { //логика "отскока" от краев
+            if (circle.x > this.width || circle.x < 0) { //логика "отскока" от краев по горизонтали
                 circle.sx *= - 1;
+            }
+            else if (circle.y > this.height || circle.y < 0) { //логика "отскока" от краев по вертикали
+                circle.sy *= - 1;
             }
         }
     },
