@@ -7,8 +7,8 @@
 
 let canvas = {
     c: null,             //c = context
-    width: 640,
-    height: 320,
+    width: window.innerWidth,
+    height: window.innerHeight,
     circles: [],
     circlesNum: 10,
     colorArr: [
