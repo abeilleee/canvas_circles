@@ -11,6 +11,14 @@ let canvas = {
     height: 320,
     circles: [],
     circlesNum: 10,
+    colorArr: [
+        '#ec8de9',
+        '#81b1ff',
+        '#4925c1',
+        '#8c5ad0',
+        '#f4d2f8',
+    ],
+
     init() {
         this.c = document.getElementById('my-canvas').getContext('2d');
         console.log('init');
@@ -23,6 +31,7 @@ let canvas = {
                 radius: 50 * Math.random(),
                 sx: 5 * Math.random(),          //speed x
                 sy: 5 * Math.random(),          //speed y
+                
             })
         }
     },
