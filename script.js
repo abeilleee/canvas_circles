@@ -10,7 +10,7 @@ let canvas = {
     width: window.innerWidth,
     height: window.innerHeight,
     circles: [],
-    circlesNum: 10,
+    circlesNum: 100,
     colorArr: [
         '#ec8de9',
         '#81b1ff',
@@ -21,6 +21,9 @@ let canvas = {
 
     init() {
         this.c = document.getElementById('my-canvas').getContext('2d');
+        const can = document.getElementById('my-canvas');
+        can.width = window.innerWidth;
+        can.height = window.innerHeight;
         console.log('init');
     },
     createCircle() {
