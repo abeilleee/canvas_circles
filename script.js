@@ -33,6 +33,7 @@ let canvas = {
         }
     },
     render() {
+        this.c.clearRect(0,0,this.width, this.height);
         for (let circle of this.circles) {
             this.c.beginPath();
             this.c.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
