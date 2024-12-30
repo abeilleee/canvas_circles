@@ -30,10 +30,14 @@ let canvas = {
         for (let circle of this.circles) {
             circle.x += circle.sx;
             circle.y += circle.sy;
+
+            if (circle.x > this.width || circle.x < 0) { //логика "отскока" от краев
+                circle.sx *= - 1;
+            }
         }
     },
     render() {
-        this.c.clearRect(0,0,this.width, this.height);
+        this.c.clearRect(0, 0, this.width, this.height);
         for (let circle of this.circles) {
             this.c.beginPath();
             this.c.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
